@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+header {
+  width: 100%;
+  height: 7rem;
+  padding: 5rem;
+  background: rgb(1, 14, 58);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgb(255, 0, 0);
+}
+header h1 {
+  padding: 1rem;
+  color: #fff;
+}
+header a {
+  text-decoration: none;
+}
+#form {
+  display: flex;
+  align-items: center;
+}
+#search {
+  width: 50rem;
+  height: 5rem;
+  font-size: 2rem;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 2rem;
+  padding-left: 2rem;
+}
+#main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#main div {
+  width: 30rem;
+  height: 35rem;
+  margin: 4rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: red;
+}
+
+/* MEDIA RESPONSIVE */
+/*font-size: 62,5%; 1 rem = 10px tab landscape 
+  font-size: 56, 25%; 1 rem = 9px tab portrait 
+  font-size:50 %; 1 rem = 8px  tab landscape 
+  font-size: 75%; 1 rem = 12px big desktop 
+  */
+/*BIG DESKTOP*/
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 56, 25%;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+  #search {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 3.5rem;
+  }
+  #search {
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}
